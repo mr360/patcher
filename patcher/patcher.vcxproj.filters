@@ -18,5 +18,8 @@
     <ClInclude Include="IPatch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PatchStatic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
