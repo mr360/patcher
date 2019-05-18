@@ -147,6 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="IPatch.h" />
+    <ClInclude Include="PatchDynamic.h" />
     <ClInclude Include="PatchStatic.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
