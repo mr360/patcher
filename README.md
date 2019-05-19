@@ -5,7 +5,7 @@ A C++ dll that allows for easy patching of live and static files
 ### Static Patching
     int main()
     {
-        Patch::Static.Load(file);
+        Patch::Static.Load(".../file.exe");
         Patch::Static.Save("file_original.bak");
 
         Patch::Static.SetEA("0x000000","0x00FF90");
