@@ -11,7 +11,7 @@ A C++ dll that allows for easy patching of live and static files
         Patch::Static.SetEA("0x000000","0x00FF90");
         if (Patch::Static.LocateAddr("0x003A10"))
         {
-          Patch::Patch("EF36FFEA1E","FFFFFFFFF0"); 
+          Patch::Static.Patch("EF36FFEA1E","FFFFFFFFF0"); 
           Patch::Static.Save();
         }
 
@@ -19,4 +19,16 @@ A C++ dll that allows for easy patching of live and static files
     }
     
 ### Live Patching    
-    // The same as static patching but you load in the handle to the live proc.
+    // The same as static patching but you load in the pid of the live file.
+    int main()
+    {
+        Patch::Dynamic.Load("pid");
+
+        Patch::Dynamic.SetEA("0x000000","0x00FF90");
+        if (Patch::Dynamic.LocateAddr("0x003A10"))
+        {
+          Patch::Dynamic.Patch("EF36FFEA1E","FFFFFFFFF0"); 
+        }
+
+        Patch::Dynamic.Unload();
+    }
